@@ -8,21 +8,27 @@
 
 import UIKit
 
+class Session {
+    static let instance = Session()
+    private init() { }
+    var fio: String = ""
+    var id: Int = 0
+    
+    
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var enterButton: UIButton!
-    
-    
     @IBOutlet weak var loginTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
-  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let session = Session.instance
+        session.fio = "Cameron Patterson"
+        session.id = 1
         
     }
 
